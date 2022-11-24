@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勉強した時間</title>
+    <link rel="stylesheet" herf="studytime.css" />
+</head>
+<body>
+    <style>
+        .example{
+            /*コレ*/text-align: left;
+            border: 1px solid #999;
+            padding: 10px;
+            background: #fff9cc;
+            margin-top:10px;
+}
+    </style>
+        <div class="example">
+            <h1 id="display-area"></h1>
+            <button id="text-botton1" onclick="clickDisplayAlert(1)" style="text-align: center; border: 1px solid #000000">勉強開始</button>
+            <button id="text-botton2" onclick="clickDisplayAlert(2)" style="text-align: center; border: 1px solid #000000">勉強終了</button>
+        </div>
+    <style>
+        .example2{
+            /*コレ*/text-align: right;
+            border: 1px solid #999;
+            padding: 10px;
+            background: #fff9cc;
+            margin-top:10px;
+}
+    </style>
+        <div class2="example2">
+            <button id="totalstudy" onclick="clicktest()" style="text-align: center; border: 1px solid #000000">勉強総時間表示</button>
+        </div>
+    
+    <!-- <div id="div1">
+        <lader>もっと頑張れ</lader>
+    </div>
+    <div id="div2">
+        <lader>ナイスファイト</lader>
+    </div> -->
+    <script>
+        function clickDisplayAlert(num) {
+            if (num === 1) {
+                start ();
+            } else {
+                stop ();
+            }
+        }
+    </script>
+<script src="stadytime.js"></script>
+<!-- <script src="sanpuru.js"></script> -->
+</body>
+</html>
