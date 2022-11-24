@@ -216,7 +216,7 @@
 }
 
 #box4{
-    background:url("../image/01.jpg") no-repeat center;
+    background-image: url("../image/01.jpg") no-repeat center;
     background-size: cover;
 }
 
