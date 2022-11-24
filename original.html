@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あなたにおすすめのスポット診断</title>
+    <link rel="stylesheet" href="original.css">
+
+</head>
+<body>
+    <div id="place"><h1 class="title1">わたしの地元のおすすめの場所診断‼</h1>
+    <p class="title1">診断したい人の名前を入れてください</p>
+    <input type="text" id="user-name" size="40" maxlength="20" />
+    <button id="original">診断する</button>
+    <div id="result-area"></div>
+    <div id="tweet-area"></div></div>
+    <script src="original.js"></script>
+
+
+    <p id="2nd" class="title1" style="display:none ;">あなたの好きなものは？</p>
+    <button class="color hidden" onclick="colorSelect('yellow')"><p>外or家</p></button>
+    <button class="color hidden" onclick="colorSelect('black')"><p>食事</p></button>
+    <!-- <button class="color hidden" onclick="colorSelect('red')"><p>遊びに行く</p></button> -->
+    <button class="color hidden" onclick="colorSelect('blue')"><p>自然</p></button>
+
+
+    <p id="3rd" class="title1" style="display:none;">落ち着くのはどっち？</p>
+    <button id="in" class="room hidden" onclick="roomSelect('in')"><img src="https://s3-ap-northeast-1.amazonaws.com/ietate/folders/881/images/3511/large.?1504803023" alt="家の画像" width="300" height="200"></button>
+    <button id="out" class="room hidden" onclick="roomSelect('out')"><img src="http://www.yu-kikobo.com/wp-content/uploads/2015/09/garden-reform-tsutsumi002.jpg" alt="外の画像" width="300" height="200"></button>
+    
+    
+    <p id="4th" class="title1" style="display:none;">あなたの好きな食べ物は？</p>
+    <button id="fast" class="food hidden" onclick="foodSelect('fast')"><img src="http://livedoor.blogimg.jp/ps3jp/imgs/e/c/ec94bd3c.jpg" alt="ファストフード" width="300" height="200"></button>
+    <button id="japanese" class="food hidden" onclick="foodSelect('japanese')"><img src="https://free-materials.com/adm/wp-content/uploads/2018/03/adpDSC_6100-300x200.jpg" alt="和食" width="300" height="200"></button>
+
+
+    <p id="5th" style="display:none;">どっちが好き？</p>
+    <button id="Disney" class="park hidden" onclick="parkSelect('Disney')"><img src="https://www.tokyodisneyresort.jp/var/rev0/0004/5558/tdr-mainvisual-og.jpg" alt="ディズニーランド" width="300" height="200"></button>
+    <button id="USJ" class="park hidden" onclick="parkSelect('USJ')"><img src="https://cdn.pixabay.com/photo/2016/12/18/03/04/usj-1914934_1280.jpg" alt="ユニバ" width="300" height="200"></button>
+        
+    <p id="6th" class="title1" style="display:none;">楽しいのはどっち？</p>
+    <button id="sea" class="place hidden" onclick="placeSelect('sea')"><img src="https://pakutaso.cdn.rabify.me/shared/img/thumb/NKJ56_taketomishimanoumitosora.jpg?d=1420" alt="海" width="300" height="200"></button>
+    <button id="Mt" class="place hidden" onclick="placeSelect('Mt')"><img src="https://illustphoto.com/matome/photo/7.jpg" alt="山" width="300" height="200"></button>
+
+
+
+    <p id="7th" style="display:none;">inの結果</p>
+    <p class="result1 hidden"><span id="result1answer">JSで書き換え</span></p>
+    <p class="result1 hidden"><span id="result1-1answer">JSで書き換え</span></p>
+    <p class="result1 hidden"><img src="https://img.pretty-online.jp/wp-content/uploads/2022/04/22154848/insta_hitoriroom_5.jpg" alt="room" width="400" height="500"></p>
+
+
+    <p id="8th"  style="display:none;">outの結果</p>
+    <p class="result2  hidden"><span id="result2answer">JSで書き換え</span></p>
+    <p class="result2  hidden"><span id="result2-1answer">JSで書き換え</span></p>
+    <p class="result2 hidden"><img src="https://www.kishiwada-park.jp/wp-content/uploads/files/chuou_child.jpg" alt="中央公園" width="400" height="300"></p>
+    <p class="result2 hidden"><a href="https://www.google.com/maps/place/%E5%B2%B8%E5%92%8C%E7%94%B0%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92/@34.4698508,135.3922222,17z/data=!3m1!4b1!4m5!3m4!1s0x6000c59374241ca3:0x46bd6a5f53a40e61!8m2!3d34.4698508!4d135.3944109?hl=ja">中央公園の位置</a></p>
+
+
+    <p id="9th" style="display:none;">fastの結果</p>
+    <p class="result3 hidden"><span id="result3answer">JSで書き換え</span></p>
+    <p class="result3  hidden"><span id="result3-1answer">JSで書き換え</span></p>
+    <p class="result3  hidden"><span id="result3-2answer">JSで書き換え</span></p>
+    <p class="result3  hidden"><span id="result3-3answer">JSで書き換え</span></p>
+    <p class="result3  hidden"><img src="https://www.suntory.co.jp/shop_img/l/0724373944_l1.jpg" alt="店内"></p>
+    <p class="result3 hidden"><a href="https://www.google.com/maps/place/%E3%82%B3%E3%82%B3%E3%82%A4%E3%83%AD%E3%82%AB%E3%83%95%E3%82%A7+%E5%B2%B8%E5%92%8C%E7%94%B0%E5%BA%97%EF%BC%88Cocoiro%EF%BC%89/@34.457488,135.3869913,17z/data=!3m1!4b1!4m5!3m4!1s0x6000c5f4255aca27:0xc3221e413157d680!8m2!3d34.457488!4d135.38918?hl=ja">ココイロカフェの位置情報</a></p>
+    <p id="10th" style="display:none;">japaneseの結果</p>
+    <p class="result4  hidden"><span id="result4answer">JSで書き換え</span></p>
+    <p class="result4  hidden"><span id="result4-1answer">JSで書き換え</span></p>
+    <p class="result4  hidden"><span id="result4-2answer">JSで書き換え</span></p>
+    <p class="result4  hidden"><span id="result4-3answer">JSで書き換え</span></p>
+    <p class="result4  hidden"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ilUtdcZddkE32TLXrmhfeudAT0t6E3pKow&usqp=CAU" alt="和食"></p>
+    <p class="result4  hidden"><a href="https://www.google.com/maps?q=%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%E3%81%94%E3%81%A1&rlz=1C1PWSB_jaJP1020JP1025&sxsrf=ALiCzsY6vtKdz-Qm4GUlevNT9CFKIIi6vg:1668840425569&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMgQIABBDMgQIABBDMgQIABBDMgcIABAEEIAEMgcIABAEEIAEMggIABCxAxCDATIECAAQQzIICAAQsQMQgwEyBwgAEAQQgAQyCAgAELEDEIMBOgoIABBHENYEELADOgUIABCABDoCCCY6BwgjEOoCECc6BAgjECc6DQgAEAQQgAQQsQMQgwE6CggAEAQQgAQQsQM6CwgAEIAEELEDEIMBOhMIABAEEIAEELEDEIMBELEDEIMBOgYIABAEEANKBAhBGABKBAhGGABQhAxYn0Zg_kZoBHAAeAOAAXOIAYIMkgEEMTEuNZgBAKABAbABCsgBCsABAQ&um=1&ie=UTF-8&sa=X&ved=2ahUKEwj5soHE07n7AhVQrVYBHbXDCN4Q_AUoAXoECAMQAw">ゴチの位置情報</a></p>
+
+    <!-- <p id="11th" style="display:none;">Disneyの結果</p>
+    <p class="result5 hidden"><span id="result5answer">JSで書き換え</span></p>
+    <p class="result5 hidden"><span id="result5-1answer">JSで書き換え</span></p>
+    <p id="12th" style="display:none;">USJの結果</p>
+    <p class="result6 hidden"><span id="result6answer">JSで書き換え</span></p> -->
+
+
+    <p id="13th" style="display:none;">seaの結果</p>
+    <p class="result7  hidden"><span id="result7answer">JSで書き換え</span></p>
+    <p class="result7  hidden"><span id="result7-1answer">JSで書き換え</span></p>
+    <p class="result7  hidden"><span id="result7-2answer">JSで書き換え</span></p>
+    <p class="result7 hidden"><img src="https://www.city.kishiwada.osaka.jp/uploaded/image/66869.jpg" alt="カンカン" width="500" height="300"></p>
+    <p class="result7  hidden"><a href="https://www.google.com/maps/place/%E5%B2%B8%E5%92%8C%E7%94%B0%E3%82%AB%E3%83%B3%E3%82%AB%E3%83%B3%E3%83%99%E3%82%A4%E3%82%B5%E3%82%A4%E3%83%89%E3%83%A2%E3%83%BC%E3%83%AB+WEST/@34.4671797,135.3686395,17z/data=!3m1!4b1!4m5!3m4!1s0x6000c6746d5a1319:0xf9a2909bd8fcc30d!8m2!3d34.4671797!4d135.3708282?hl=ja">カンカンベイサイドモール</a></p>
+    <p class="result7 hidden"><a href="https://www.google.com/maps/place/%E3%82%8A%E3%82%93%E3%81%8F%E3%81%86%E5%85%AC%E5%9C%92+%E3%83%9E%E3%83%BC%E3%83%96%E3%83%AB%E3%83%93%E3%83%BC%E3%83%81/@34.4036344,135.2868787,17z/data=!3m1!4b1!4m5!3m4!1s0x6000b7f0c66a4f85:0xf6c299972fd140de!8m2!3d34.4036344!4d135.2890674?hl=ja">ビーチ</a></p>
+    
+    
+    <p id="14th" style="display:none;">Mtの結果</p>
+    <p class="result8  hidden"><span id="result8answer">JSで書き換え</span></p>
+    <p class="result8  hidden"><span id="result8-1answer">JSで書き換え</span></p>
+    <p class="result8 hidden"><span id="result8-2answer">JSで書き換え</span></p>
+    <p class="result8 hidden"><img src="http://blog-imgs-44.fc2.com/n/e/k/nekosomari/031a_20101128185421.jpg" alt="蜻蛉池公園"></p>
+    <p class="result8 hidden"><a href="https://www.google.com/maps/place/%E7%89%9B%E6%BB%9D%E5%B7%9D/@34.3846271,135.4077268,13z/data=!3m1!4b1!4m5!3m4!1s0x6000cd8bf2550ce7:0xd83e74d32726e8b7!8m2!3d34.3880392!4d135.4453382">牛滝山</a></p>
+    <p class="result8 hidden"><a href="https://www.google.com/maps/place/%E8%9C%BB%E8%9B%89%E6%B1%A0%E5%85%AC%E5%9C%92/@34.7442441,135.5055997,11z/data=!4m10!1m2!2m1!1z6Jy76JuJ5rGg5YWs5ZyS!3m6!1s0x60011f04f86807c5:0xfdfd37781726b684!8m2!3d34.7442441!4d135.6456754!15sCg_onLvom4nmsaDlhazlnJKSAQRwYXJr4AEA!16s%2Fg%2F11g8z4szg5"> 蜻蛉池公園</a></p>
+</body>
+</html>
+
+<!-- もじにtitle1をつける -->
