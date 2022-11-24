@@ -1,0 +1,331 @@
+/* body{font-family:'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'  ,serif;}  */
+/*  Windows対応のフォントを探す。
+複数のフォントは「，」で区切り、「’」で挟む
+前に書かれたフォントが優先され、日本語を表示できない英語フォントを先に書く。
+また、 */
+
+@charset "utf-8";
+
+*{/*スライドショーとflexboxを同時に使う時に必要。*/
+
+min-width: 0;	
+min-height: 0;
+	
+}
+	
+	
+
+/*========= ページトップのためのCSS ===============*/
+
+
+/*リンクの形状*/
+#page-top a{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background:#942D2F;
+	border-radius: 5px;
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	font-size:0.6rem;
+	transition:all 0.3s;
+	background: url(アイコン5.jpeg);
+	/*.icon{
+		width: "10px";
+		height: "10px";
+	   }*/
+}
+
+#page-top a:hover{
+	background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+    top: 0px;
+	left: 10px;
+/*	bottom:20px;*/
+	z-index: 2;
+    /*はじめは非表示*/
+/*	opacity: 0;
+	transform: translateY(100px);*/
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+	font-size:1.2rem;
+}
+
+h2{
+	font-size:1.2rem;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+
+p{
+	margin-top:20px;	
+}
+
+small{
+	background:#333;
+	color:#fff;
+	display: block;
+	text-align: center;
+	padding:20px;
+}
+
+#header{
+	background:#333;
+	color:#fff;
+	text-align: center;
+	padding: 20px;
+}
+
+section:nth-child(2n){
+	background:#f3f3f3;	
+}
+
+#footer{
+	position: relative;
+	z-index: 2;
+	background:#96e3e3;
+}
+
+/*img{　枠線と角の丸み及び、影をつけるプログラム
+    border:2px solid#2bd2ff;
+	border-radius: 1rem;
+	padding:5px;
+	box-shadow:3px3px5px#777777;
+}*/
+
+/*スライドショーとマップのcss*/
+div.container_box{
+ padding: 10px;
+ opacity: 0px;
+ transform: translateY(-20px);
+ transition: 3s ease;
+}
+
+.container_box{
+ display:flex;
+ /*background-color:#fad961;*/
+ padding:1rem 1.5rem;
+ display: flex;
+ align-items: center;
+ /* background-color:yellow; */
+}
+.item{
+ /*background-color:#176b1c;*/
+ margin:0 auto;
+ padding:1rem 1.5rem;
+ width: 50%;
+/* background-color:pink; */
+}
+.MAP{
+ width: 100%;
+}
+
+/*トップページの文字の大きさ*/
+.Daimei{
+	font-size: 500%;
+}
+
+/*トップページの背景*/
+.background-top{
+	width: 100%;
+	height: 900px;
+	position: relative;
+	background: url(オーロラ.jpeg) no-repeat;
+	background-size:cover;
+	background-position: center;
+	/* padding: 0px 200px 0px 200px; */
+}
+
+
+/*スライドショーのサイズ*/
+.example{
+	width: 100%;
+	/* height: 300px; */
+}
+.example img{	
+	width: 100%/*300px*/;
+	height: 100%;
+	object-fit: cover;
+   background: #FFCC66;
+
+}
+
+/*スライドショーの３つの点の場所おかしい。
+画像を良い比率と大きさで半分にできない。*/
+
+/*sectionの大きさを指定*/
+section#empty {
+	height: 900px;
+	width: 100%;
+}
+
+/*文字の背景色を半透明にする*/
+.background{
+	height: 900px;
+	width: 100%;
+	position: relative;
+	background: url(長崎2.jpeg) no-repeat;
+	background-size:cover;
+	background-position: center;
+	/* padding: 0px 200px 0px 200px; */
+}
+
+.box{
+	height: 900px;
+	position: absolute;
+	left: 200px;/*leftとrightを使用し、半透明の余白を設置*/
+	right: 200px;
+	background-color: rgba(255,255,255,0.6);
+	/* width: 100%;
+	height: 100%; */
+	/* transform: translate(-50%,-50%); */
+	/* top: 50%; */
+
+}
+
+.box span{
+	position: absolute;
+	top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+    font-size: 100px;
+}
+
+/*スライドショーのフェードイン*/
+div.container_box {
+	padding: 10px;
+	/*animation: fadeIn 5s ease 1s 1 normal backwards;*/
+	opacity: 0;
+	transform: translateY(-20px);
+	transition: 5s ease;
+  }
+   
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  transform: translateY(-20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+
+/*紹介文*/
+
+.Honbun{
+	font-size: 33px;
+	color: #525252;
+	font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+}
+
+.Midashi{
+	font-size: 40px;
+	color: #64299b;
+	font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+	font-weight:bold;
+}
+
+.background2{
+	width: 100%;
+	height: 900px;
+	position: relative;
+	background: url(神戸2.jpeg) no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+.background3{
+	width: 100%;
+	height: 900px;
+	position: relative;
+	background: url(シンガポール4.jpeg) no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+.background4{
+	width: 100%;
+	height: 900px;
+	position: relative;
+	background: url(オーロラ2.jpeg) no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+.background5{
+	width: 100%;
+	height: 900px;
+	position: relative;
+	background: url(札幌４.jpeg) no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+small{
+	background-color: #727272;
+}
+
+/*本文のフェードイン*/
+div.Honbun {
+	padding: 10px;
+	/*animation: fadeIn 5s ease 1s 1 normal backwards;*/
+	opacity: 0;
+	transform: translateY(-20px);
+	transition: 5s ease;
+  }
+   
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  transform: translateY(-20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }

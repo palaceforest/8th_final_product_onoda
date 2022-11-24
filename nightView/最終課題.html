@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>scene</title>
+    <meta name="description" content="書籍「動くwebデザインアイディア帳」のサンプルサイトです">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css" href="最終課題.css">
+<!-- 二つのうち、どちらかは原文を使う。 -->
+
+<!--スライドショーのコード-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="SlideShow.css">
+<!--スライドショーとマップのフェードイン-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+
+</script>
+</head>
+
+<body>
+
+	<!--<header id="header">
+		<h1>NIGHT VIEW</h1>
+	</header>-->
+		
+	<main>
+		<!-- 1--><section id="empty"> 
+      <div class="background-top">
+			  <h1 style="text-align:center"><div class="Daimei">世界の素敵な夜景をあなたへ</div></h1>
+        <h2>このサイトでは世界中の夜景を紹介します。<br>日本では見ることのできない景色もありますよ。<br>今回はそんな絶景を五つ紹介します。</h2>
+             <!-- <div class="sub mgb-20">
+                <div>このサイトでは世界中の夜景を紹介します。<br>日本では見ることのできない景色もありますよ。<br>今回はそんな絶景を五つ紹介します。</div>
+              </div>-->
+      </div>
+		<!--/area1--></section>
+
+		<!-- 2--><section><!--Nagasaki-->
+		<h2>
+           
+    </h2>
+        <div class="background"><!--背景-->
+          <div class="box"><!--半透明-->
+             <div class="Honbun">
+                <p class="Midashi" style="text-align:center">
+                  Inasayama in Nagasaki
+                </p>
+                  トップバッターを飾るのは、長崎が誇る稲佐山公園。
+                  2012年、夜景サミット2012 in 長崎で香港、モナコと並び世界新三大夜景に選ばれ、
+                  長崎港を中心に一面に広がる夜景。その壮大さは、1000万ドルの夜景と言われる程のもの。全面ガラス張りのロープウェイから見るのも
+                  良いですね。大人一人当たり往復1250円とお手頃なので、一度行ってみてはいかがでしょうか。
+             </div>
+              
+              <div class="container_box"><!--flexbox-->
+                <div class="item"><!--div1-->
+                    <!--<img
+                      src="シンガポール2.jpeg"
+                      alt="シンガポーール"
+                      width="300"
+                      height="300"
+                    />-->
+
+                    <div class="example"><!--スライドショー大きさを指定-->
+                      <ul class="slider">
+                        <li class="slider-item slider-item01"><!-- 1枚目 -->
+                           <img 
+                              src="長崎.jpeg"
+                              alt="長崎の都市"
+                              width="300"
+                              height="300"
+                           /> 
+                        </li>
+
+                        <li class="slider-item slider-item02"><!-- 2枚目 -->
+                           <img
+                              src="長崎4.jpeg"
+                              alt="長崎-4"  
+                              width="300"
+                              height="300"
+                           />
+                         </li>
+
+                         <li class="slider-item slider-item03"><!-- ３枚目 -->
+                            <img
+                              src="長崎3.jpeg"
+                              alt="長崎-3"  
+                              width="300"
+                              height="300"
+                            />
+                       </li>
+                      </ul>
+                    </div>
+                 </div>
+
+                 <div class="item"><!--div2-->
+                  <iframe class="MAP"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3355.494029350543!2d129.84733297947162!3d32.75262348107258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3515533865a8901b%3A0x46fc857a983dd19f!2z56iy5L2Q5bGx5bGx6aCC5bGV5pyb5Y-w!5e0!3m2!1sja!2sjp!4v1667627338494!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		             </div>
+            </div>
+          </div>
+        </div>
+    <!--/area2--></section>
+
+
+
+		<!-- 3--><section><!--Kobe-->
+		 <h2>
+
+     </h2> 
+      <div class="background2"><!--背景-->
+        <div class="box"><!--半透明-->
+           <div class="Honbun">
+              <p class="Midashi" style="text-align:center">
+                Rokkosan in Kobe
+              </p>
+              続いて中国地方の有名な山、六甲山。神戸市から大阪市まで見渡せます。数km先の掬星台では日本三大夜景も見ることができます。
+              近くにはホテル神戸六甲迎賓館があり、温泉にカフェ、ペット同伴可なので泊まって帰るのも楽しいですね。
+              このホテルから車で6分行くと、六甲ケーブル下駅に。そこから六甲山天覧台へレトロモダンなケーブルカーで。
+           </div>
+            
+            <div class="container_box"><!--flexbox-->
+              <div class="item"><!--div1-->
+                  <!--<img
+                    src="シンガポール2.jpeg"
+                    alt="シンガポーール"
+                    width="300"
+                    height="300"
+                  />-->
+
+                  <div class="example"><!--スライドショー大きさを指定-->
+                    <ul class="slider">
+                      <li class="slider-item slider-item01"><!-- 1枚目 -->
+                         <img 
+                            src="神戸10.jpeg"
+                            alt="長崎の都市"
+                            width="300"
+                            height="300"
+                         /> 
+                      </li>
+
+                      <li class="slider-item slider-item02"><!-- 2枚目 -->
+                         <img
+                            src="神戸.jpeg"
+                            alt="長崎-4"  
+                            width="300"
+                            height="300"
+                         />
+                       </li>
+
+                       <li class="slider-item slider-item03"><!-- ３枚目 -->
+                          <img
+                            src="神戸3.jpeg"
+                            alt="長崎-3"  
+                            width="300"
+                            height="300"
+                          />
+                     </li>
+                    </ul>
+                  </div>
+               </div>
+
+               <div class="item"><!--div2-->
+                <iframe class="MAP" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.1452466103538!2d135.23273772856396!3d34.751933825371204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008beec0734f4f%3A0x63a1585869c75e19!2z5YWt55Sy5bGx5aSp6Kan5Y-w!5e0!3m2!1sja!2sjp!4v1669081387002!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+          </div>
+        </div>
+      </div>
+		<!--/area3--></section>
+
+
+
+		<!-- 4--><section><!--Singapore-->
+			<h2>
+        
+      </h2>
+      <div class="background3"><!--背景-->
+        <div class="box"><!--半透明-->
+           <div class="Honbun">
+              <p class="Midashi" style="text-align:center">
+                Marina Bay Sands in Singapore
+              </p>
+                お次は、日本から出ましてシンガポールの高級ホテルを紹介します。ここは、コナンの映画でもモデルとなる程、綺麗な夜景が見れる世界一高いプールが屋上にあるのです。
+                ナイトショーは毎日行われ、色鮮やかな光に照らされた海辺の都市が見えます。ガーデンズ・バイ・ザ・ベイという植物園ではイルミネーションと幻想的な大自然の調和が味わえます。
+           </div>
+            
+            <div class="container_box"><!--flexbox-->
+              <div class="item"><!--div1-->
+                  <!--<img
+                    src="シンガポール2.jpeg"
+                    alt="シンガポーール"
+                    width="300"
+                    height="300"
+                  />-->
+
+                  <div class="example"><!--スライドショー大きさを指定-->
+                    <ul class="slider">
+                      <li class="slider-item slider-item01"><!-- 1枚目 -->
+                         <img 
+                            src="シンガポール.jpeg"
+                            alt="長崎の都市"
+                            width="300"
+                            height="300"
+                         /> 
+                      </li>
+
+                      <li class="slider-item slider-item02"><!-- 2枚目 -->
+                         <img
+                            src="シンガポール2.jpeg"
+                            alt="長崎-4"  
+                            width="300"
+                            height="300"
+                         />
+                       </li>
+
+                       <li class="slider-item slider-item03"><!-- ３枚目 -->
+                          <img
+                            src="シンガポール3.jpeg"
+                            alt="長崎-3"  
+                            width="300"
+                            height="300"
+                          />
+                     </li>
+                    </ul>
+                  </div>
+               </div>
+
+               <div class="item"><!--div2-->
+                <iframe class="MAP"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.816465760646!2d103.85737686493187!3d1.2840221121406472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da191c912bf9b1%3A0xdf24c36ca4cabf1a!2z44Oe44Oq44O844OK44O744OZ44Kk44O744K144Oz44K6!5e0!3m2!1sja!2sjp!4v1669081512362!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+          </div>
+        </div>
+      </div>
+		<!--/area4--></section>
+
+
+
+		<!-- 5--><section><!--Canada-->
+			<h2>
+
+      </h2>
+      <div class="background4"><!--背景-->
+        <div class="box"><!--半透明-->
+
+            <div class="Honbun">
+              <p class="Midashi" style="text-align:center">
+                Yellowknife in Canada
+              </p>
+              少し東半球から離れて、カナダの絶景を紹介しましょう。
+              オーロラが発生しやすいオーロラベルトの真下に位置し、北極圏近くのイエローナイフでは世界トップレベルのオーロラの遭遇率となっています。
+              ベストシーズンは冬は11月中旬~4月中旬、夏は8月中旬~9月中旬です。冬は乾燥し晴れの日が多いのですが、-20℃にもなるので防寒対策は抜かりなく。
+            </div>
+            
+            <div class="container_box"><!--flexbox-->
+              <div class="item"><!--div1-->
+                  <div class="example"><!--スライドショー大きさを指定-->
+                    <ul class="slider">
+                      <li class="slider-item slider-item01"><!-- 1枚目 -->
+                         <img 
+                            src="yellowknife2.jpeg"
+                            alt="長崎の都市"
+                            width="300"
+                            height="300"
+                         /> 
+                      </li>
+
+                      <li class="slider-item slider-item02"><!-- 2枚目 -->
+                         <img
+                            src="yellowknife3.jpeg"
+                            alt="長崎-4"  
+                            width="300"
+                            height="300"
+                         />
+                       </li>
+
+                       <li class="slider-item slider-item03"><!-- ３枚目 -->
+                          <img
+                            src="yellowknife4.jpeg"
+                            alt="長崎-3"  
+                            width="300"
+                            height="300"
+                          />
+                     </li>
+                    </ul>
+                  </div>
+               </div>
+
+               <div class="item"><!--div2-->
+                <iframe class="MAP"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73795.51497790196!2d-114.57198591560454!3d62.463349456374964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53d1f12ca34682c9%3A0xb4c137244371ef81!2z44Kr44OK44OAIOODjuODvOOCueOCpuOCp-OCueODiOODu-ODhuODquODiOODquODvOOCuiDjgqTjgqjjg63jg7zjg4rjgqTjg5U!5e0!3m2!1sja!2sjp!4v1669081649464!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div> 
+          </div>
+        </div>
+      </div>
+		<!--/area5--></section>
+
+
+
+    <!-- 6--><section><!--Hokkaido-->
+			<h2>
+        
+      </h2>
+			<div class="background5"><!--背景-->
+        <div class="box"><!--半透明-->
+            <div class="Honbun" data-to-x="0" data-to-bg-position="left 0% center">
+              <p class="Midashi" style="text-align:center">
+                Sapporo in Hokkaido
+              </p>
+              最後は日本に戻り、札幌の夜景を二つ紹介します。
+              一つ目は、さっぽろテレビ塔です。南東にはもたれかかれる大きさの窓、怖窓（こわそ〜）があり、展望台は一日一組限定で貸し切ることもできます。
+              二つ目は、札幌プリンスホテルの28階です。ここには、世界の銘酒を飲めるバーやフランス料理、中国料理のレストランもあります。ひとり旅ですと、1泊13,000円とリーズナブルな点も見所です。
+            </div>
+            
+            <div class="container_box"><!--flexbox-->
+              <div class="item"><!--div1-->
+                  <!--<img
+                    src="シンガポール2.jpeg"
+                    alt="シンガポーール"
+                    width="300"
+                    height="300"
+                  />-->
+
+                  <div class="example"><!--スライドショー大きさを指定-->
+                    <ul class="slider">
+                      <li class="slider-item slider-item01"><!-- 1枚目 -->
+                         <img 
+                            src="函館.jpeg"
+                            alt="長崎の都市"
+                            width="300"
+                            height="300"
+                         /> 
+                      </li>
+
+                      <li class="slider-item slider-item02"><!-- 2枚目 -->
+                         <img
+                            src="さっぽろ.jpeg"
+                            alt="長崎-4"  
+                            width="300"
+                            height="300"
+                         />
+                       </li>
+
+                       <li class="slider-item slider-item03"><!-- ３枚目 -->
+                          <img
+                            src="札幌3.jpeg"
+                            alt="長崎-3"  
+                            width="300"
+                            height="300"
+                          />
+                       </li>
+                    </ul>
+                  </div>
+               </div>
+               
+               <div class="item"><!--div2-->
+                <iframe class="MAP"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.3113198277483!2d141.33851766547187!3d43.05591949886429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2991b4fc6b2f%3A0x17cb73040e27758d!2z5pyt5bmM44OX44Oq44Oz44K544Ob44OG44Or!5e0!3m2!1sja!2sjp!4v1669081756328!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+          </div>
+        </div>
+      </div>
+		<!--/area6--></section>
+
+  </main><!--/main-->
+
+	<footer id="footer">
+		<p id="page-top"><a href="#">↑</a></p>	
+		<small>&copy; copyright.</small>	
+	</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="最終課題.js"></script>
+<!-- 二つのうち、どちらかは原文を使う。 -->
+
+<!--スライドショーのコード-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--自作のJS-->
+<script src="SlideShow.js"></script>
+</body>
+</html>
+
