@@ -8,7 +8,7 @@ const quizData = [
             { id:4, value:"28"},
         ],
         correctId: 2,
-        imgPath: "file:///Users/user/Pictures/%E7%84%A1%E9%A1%8C1_20221123011758.png"
+        imgPath: "無題1_20221123011758"
     },
     {
         title:"枕草子の作者は？",
@@ -19,7 +19,7 @@ const quizData = [
             { id:4, value:"清小納言"},
         ],
         correctId: 3,
-        imgPath: "file:///Users/user/Pictures/%E7%84%A1%E9%A1%8C3_20221123012837.png"
+        imgPath: "無題3_20221123012837.png"
     },
     {
         title:"Wednesdayを日本語にすると？",
@@ -30,7 +30,7 @@ const quizData = [
             { id:4, value:"水曜日"},
         ],
         correctId: 4,
-        imgPath: "file:///Users/user/Pictures/%E7%84%A1%E9%A1%8C4_20221123013250.png"
+        imgPath: "無題4_20221123013250"
     }
 ]
 
