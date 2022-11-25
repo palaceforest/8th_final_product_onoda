@@ -8,7 +8,7 @@ const quizData = [
             { id:4, value:"28"},
         ],
         correctId: 2,
-        imgPath: "無題1_20221123011758"
+        imgPath: "無題1_20221123011758.png"
     },
     {
         title:"枕草子の作者は？",
@@ -30,7 +30,7 @@ const quizData = [
             { id:4, value:"水曜日"},
         ],
         correctId: 4,
-        imgPath: "無題4_20221123013250"
+        imgPath: "無題4_20221123013250.png"
     }
 ]
 
